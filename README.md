@@ -55,17 +55,20 @@ To find the most meaningful features to be used for predictions using regression
 
 ![Correlation](./figures/corrolation.png)
 
-After that I used Linear regression and Gradient Boosting Regressor to predict the price once based on all features and specific features.
+After that I used Linear Regression and Gradient Boosting Regressor to predict the price based on specific features (LSTAT and RM which have 0.74 and 0.7 in correlation matrix above) and then all features.
 
 ![LR_LSTAT_RM](./figures/predict_price_LSTAT_RM_based.png)
 ![LR](./figures/predict_price.png)
 ![GARD](./figures/GardBR.png)
 
-Brief (2 paragraph) description about your results. Include:
+The RMSE values for the testing came out as follows for Linear Regression:
+5.05 based on LSTAT and RM 
+4.51 based on all features
+The RMSE for Gardient Boosting Regressor:
+3.06 based on all features
 
-- At least 1 figure
-- At least 1 "value" that summarizes either your data or the "performance" of your method
-- A short explanation of both of the above
+This shows that price prediction using Linear Regression based on all features was better than when trying with only LSTAT and RM. On the other hand it turned out to be that using Gardient Boosting Regressor for this dataset gave a better performance.
+
 
 ### Discussion
 Brief (no more than 1-2 paragraph) description about what you did. Include:
