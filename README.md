@@ -72,10 +72,8 @@ This shows that price prediction using Linear Regression based on all features w
 
 
 ### Discussion
-Brief (no more than 1-2 paragraph) description about what you did. Include:
 
-- interpretation of whether your method "solved" the problem
-- suggested next step that could make it better.
+The analysis and the methods used above on Boston Housing Dataset were very useful for learning. However I believe it does not strictly mean that it provided the best resolution to our question. Digging a bit deeper in machine learning might reveal even better and more efficient methods one of them could be polynomial regression.
 
 ### References
 All of the reference links can be found within the document.
