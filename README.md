@@ -7,12 +7,11 @@
 -----
 
 ### Resources
-Your repository should include the following:
 
-- Python script for your analysis
-- Results figure/saved file
-- Dockerfile for your experiment
-- runtime-instructions in a file named RUNME.md
+- Python script used for analysis: `python_boston.py`
+- Results figures saved in: `figures/`
+- Dockerfile: `Dockerfile`
+- runtime-instructions in: `RUNME.md`
 
 -----
 
