@@ -1,11 +1,11 @@
 
-The script can be run through:
+#The script can be run through:
 
 docker build -t <image_name> ./
 
 docker run -ti <image_name>
 
-Tasks performed:
+#Tasks performed:
 
 - plot histograms (in ./hist_fig)
 - plot scatter (in ./scatter_fig)
