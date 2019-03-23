@@ -47,9 +47,15 @@ The Boston Housing Dataset was chosen after reviewing a number of available data
 
 ### Methods
 
-In order to answer the research question multiple methods were used. First by displaying and analyzing the correlation between all features which helps determine what are the most relevant features for Linear Regression and Gradient Boosting Regressor. I useed Linear Regression because it turned out to be the first machine learning algorithm that every data scientist must comes across and it lays the foundation for other machine learning algorithms. The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable) [source](https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2). Using these methods I was able to predict the prices based on all feature or a subset of features as well as measure the performance of this prediction.
+In order to answer the research question multiple methods were used. First by displaying and analyzing the correlation between all features which helps determine what are the most relevant features for Linear Regression and Gradient Boosting Regressor. I useed Linear Regression because it turned out to be the first machine learning algorithm that every data scientist must comes across and it lays the foundation for other machine learning algorithms. The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable) [1](https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2). Using these methods I was able to predict the prices based on all feature or a subset of features as well as measure the performance of this prediction.
 
 ### Results
+
+To find the most meaningful features to be used for predictions using regressions, we first conduct a correlation analysis of all features. The correlation matrix below shows the relationship between features the higher the number, the stronger the correlation, whereas the signs shows either a positive or a negative correlation.
+
+![Correlation](./Figures/corrolation.png)
+
+After that I used Linear regression (LR) and Gradient Boosting Regressor to predict the price once based on all features and specific features.
 
 Brief (2 paragraph) description about your results. Include:
 
