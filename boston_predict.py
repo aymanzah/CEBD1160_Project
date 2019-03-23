@@ -115,17 +115,21 @@ def plot_correlation():
  if not os.path.exists(corr_dir_path):
      os.makedirs(corr_dir_path)
 
- correlations = data.corr()
- fig, ax = plt.subplots(figsize=(len(features_list), len(features_list)))
- cax = ax.matshow(correlations, vmin=-1, vmax=1)
- fig.colorbar(cax)
+ correlations = data.corr().round(2)
+ fig, ax = plt.subplots(figsize=(len(features_list)+2, len(features_list)-4))
+ sns.heatmap(data=correlations, annot=True)
+
+# Old way
+# cax = ax.matshow(correlations, vmin=-1, vmax=1)
+# fig.colorbar(cax)
  
- ax.set_xticks(range(0, len(features_list)))
- ax.set_yticks(range(0, len(features_list)))
+# ax.set_xticks(range(0, len(features_list)))
+# ax.set_yticks(range(0, len(features_list)))
 
- ax.set_xticklabels(features_list)
- ax.set_yticklabels(features_list)
+# ax.set_xticklabels(features_list)
+# ax.set_yticklabels(features_list)
 
+ plt.title('Boston Housing dataset \n Correlation Matrix')
  print ("Generating corrolation file for all features in {} dir".format(corr_dir_path))
  plt.savefig('{}corrolation.png'.format(corr_dir_path))
  #plt.show()
@@ -219,11 +223,11 @@ def predict_price():
 
  plt.xlabel('Expected Price')
  plt.ylabel('Predicted price')
- plt.title('Boston prices Expected/Predicted')
+ plt.title('Boston prices Expected/Predicted \n Linear Regression - LSTAT and RM')
 
  print ("Creating prediction figure based on LSTAT and RM in {} dir".format(pred_dir_path))
  plt.savefig('{}predict_price_LSTAT_RM_based.png'.format(pred_dir_path))
- plt.show()
+ #plt.show()
 
 
  #test and train using all data
@@ -242,11 +246,11 @@ def predict_price():
 
  plt.xlabel('Expected Price')
  plt.ylabel('Predicted price')
- plt.title('Boston prices Expected/Predicted')
+ plt.title('Boston prices Expected/Predicted \n Linear Regression - All features')
 
  print ("Creating prediction figure based on boston data in {} dir".format(pred_dir_path))
  plt.savefig('{}predict_price.png'.format(pred_dir_path))
- plt.show()
+ #plt.show()
 
 
  #Gradient Boosting Regressor
@@ -257,19 +261,22 @@ def predict_price():
  predicted = clf.predict(X_test)
  expected = y_test
 
+ print ("Performance based on all data:")
+ print("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
+
  plt.scatter(expected, predicted)
  plt.plot([0, 50], [0, 50], '--k')
 
  plt.xlabel('Expected Price')
  plt.ylabel('Predicted price')
- plt.title('Boston prices Expected/Predicted')
+ plt.title('Boston prices Expected/Predicted \n Gardient Boosting Reg - All features')
 
  print ("Creating GBR prediction in {} dir".format(pred_dir_path))
  plt.savefig('{}GardBR.png'.format(pred_dir_path))
- plt.show()
+ #plt.show()
 
-plot_histogram()
-plot_scatter_pairs()
+#plot_histogram()
+#plot_scatter_pairs()
 plot_correlation()
-plot_multiple_features()
+#plot_multiple_features()
 predict_price()
