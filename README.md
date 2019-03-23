@@ -67,6 +67,6 @@ Brief (no more than 1-2 paragraph) description about what you did. Include:
 - suggested next step that could make it better.
 
 ### References
-All of the links
+All of the reference links can be found within the document.
 
 -------
