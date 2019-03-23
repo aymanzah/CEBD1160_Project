@@ -53,7 +53,7 @@ In order to answer the research question multiple methods were used. First by di
 
 To find the most meaningful features to be used for predictions using regressions, we first conduct a correlation analysis of all features. The correlation matrix below shows the relationship between features the higher the number, the stronger the correlation, whereas the signs shows either a positive or a negative correlation.
 
-![Correlation](./Figures/corrolation.png)
+![Correlation](./figures/corrolation.png)
 
 After that I used Linear regression (LR) and Gradient Boosting Regressor to predict the price once based on all features and specific features.
 
