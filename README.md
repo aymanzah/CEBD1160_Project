@@ -64,7 +64,7 @@ After that I used Linear Regression and Gradient Boosting Regressor to predict t
 The RMSE values for the testing came out as follows for Linear Regression:
 - 5.05 based on LSTAT and RM 
 - 4.51 based on all features
-The RMSE for Gardient Boosting Regressor:
+\nThe RMSE for Gardient Boosting Regressor:
 - 3.06 based on all features
 
 This shows that price prediction using Linear Regression based on all features was better than when trying with only LSTAT and RM. On the other hand it turned out to be that using Gardient Boosting Regressor for this dataset gave a better performance.
