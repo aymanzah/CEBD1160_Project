@@ -8,7 +8,7 @@
 
 ### Resources
 
-- Python script used for analysis: `python_boston.py`
+- Python script used for analysis: `boston_predict.py`
 - Results figures saved in: `figures/`
 - Dockerfile: `Dockerfile`
 - runtime-instructions in: `RUNME.md`
