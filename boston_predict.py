@@ -17,6 +17,7 @@ import plotly.graph_objs as go
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.metrics import mean_squared_error
 
 hist_dir_path='./hist_fig/'
 scatter_dir_path='./scatter_fig/'
@@ -216,7 +217,8 @@ def predict_price():
  predicted = clf.predict(X_test)
  expected = y_test
  print ("Performance based on LSTAT and RM data:")
- print ("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
+ print ("RMSE: %s" % np.sqrt(mean_squared_error(expected, predicted)))
+ #print ("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
 
  plt.scatter(expected, predicted)
  plt.plot([0, 50], [0, 50] , '--k')
@@ -227,7 +229,7 @@ def predict_price():
 
  print ("Creating prediction figure based on LSTAT and RM in {} dir".format(pred_dir_path))
  plt.savefig('{}predict_price_LSTAT_RM_based.png'.format(pred_dir_path))
- #plt.show()
+ plt.show()
 
 
  #test and train using all data
@@ -239,7 +241,8 @@ def predict_price():
  predicted = clf.predict(X_test)
  expected = y_test
  print ("Performance based on all data:")
- print("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
+ print ("RMSE: %s" % np.sqrt(mean_squared_error(expected, predicted)))
+ #print("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
 
  plt.scatter(expected, predicted)
  plt.plot([0, 50], [0, 50] , '--k')
@@ -250,7 +253,7 @@ def predict_price():
 
  print ("Creating prediction figure based on boston data in {} dir".format(pred_dir_path))
  plt.savefig('{}predict_price.png'.format(pred_dir_path))
- #plt.show()
+ plt.show()
 
 
  #Gradient Boosting Regressor
@@ -262,7 +265,8 @@ def predict_price():
  expected = y_test
 
  print ("Performance based on all data:")
- print("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
+ print ("RMSE: %s" % np.sqrt(mean_squared_error(expected, predicted)))
+ #print("RMS: %s" % np.sqrt(np.mean((predicted - expected) ** 2)))
 
  plt.scatter(expected, predicted)
  plt.plot([0, 50], [0, 50], '--k')
@@ -273,7 +277,7 @@ def predict_price():
 
  print ("Creating GBR prediction in {} dir".format(pred_dir_path))
  plt.savefig('{}GardBR.png'.format(pred_dir_path))
- #plt.show()
+ plt.show()
 
 #plot_histogram()
 #plot_scatter_pairs()
