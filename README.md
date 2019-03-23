@@ -2,7 +2,7 @@
 
 | Name | Date |
 |:-------|:---------------|
-|Ayman Zahreddine | March 22, 2019|
+|Ayman Zahreddine | March 23, 2019|
 
 -----
 
@@ -47,7 +47,7 @@ The Boston Housing Dataset was chosen after reviewing a number of available data
 
 ### Methods
 
-In order to answer the research question multiple methods were used. First by displaying and analyzing the correlation between all features which helps determine what are the most relevant features for Linear Regression and Gradient Boosting Regressor. I useed Linear Regression because it turned out to be the first machine learning algorithm that every data scientist must comes across and it lays the foundation for other machine learning algorithms. The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable) [[1]](https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2). Using these methods I was able to predict the prices based on all feature or a subset of features as well as measure the performance of this prediction.
+In order to answer the research question multiple methods were used. First by displaying and analyzing the correlation between all features which helps determine what are the most relevant features for Linear Regression and Gradient Boosting Regressor. I used Linear Regression because it turned out to be the first machine learning algorithm that every data scientist must comes across and it lays the foundation for other machine learning algorithms. The objective of a linear regression model is to find a relationship between one or more features(independent variables) and a continuous target variable(dependent variable) [[1]](https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2). Using these methods I was able to predict the prices based on all feature or a subset of features as well as measure the performance of this prediction.
 
 ### Results
 
@@ -68,12 +68,12 @@ The RMSE values for the testing came out as follows for Linear Regression:
 The RMSE for Gardient Boosting Regressor:
 - 3.06 based on all features
 
-This shows that price prediction using Linear Regression based on all features was better than when trying with only LSTAT and RM. On the other hand it turned out to be that using Gardient Boosting Regressor for this dataset gave a better performance.
+This showed that price prediction using Linear Regression based on all features was better than when trying with only LSTAT and RM. On the other hand it turned out to be that using Gardient Boosting Regressor for this dataset gave a better performance.
 
 
 ### Discussion
 
-The analysis and the methods used above on Boston Housing Dataset were very useful for learning. However I believe it does not strictly mean that it provided the best resolution to our question. Digging a bit deeper in machine learning might reveal even better and more efficient methods one of them could be polynomial regression.
+The analysis and the methods used above on Boston Housing Dataset were very useful. However I believe it does not strictly mean that it provided the best available solution to the main question. Digging a bit deeper in machine learning might reveal even better and more efficient methods one of them for the next step could be learning and trying polynomial regression.
 
 ### References
 All of the reference links can be found within the document.
